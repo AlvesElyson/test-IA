@@ -15,15 +15,17 @@ print('\nQuestão 3.')
 print(alunos["cidade"].isnull().sum())
 # .isnull().sum() conta quantos valores estão faltando (NaN) na coluna.
 
-# 4. Remova as colunas altura e peso do dataset alunos
+# 4. Remova as colunas altura e peso do dataset alunos usando .drop(columns=[])
+# Coloque-as em uma variável chamada "alunos_columns"
 alunos_columns = alunos.drop(columns=["altura", "peso"])
 # .drop(columns=[]) remove colunas específicas do DataFrame.
 
-# 5. Remova as linhas com valores nulos na coluna nota
+# 5. Remova as linhas com valores nulos na coluna nota .dropna(subset=[])
+# Coloque-as em uma variável chamada "alunos_subset"
 alunos_subset = alunos_columns.dropna(subset=["nota"])
 # .dropna(subset=[]) remove linhas onde há valores nulos na coluna especificada.
 
-# 6. Mostre o tamanho do novo dataset alunos_subset
+# 6. Mostre o tamanho do novo dataset alunos_subset usando .shape
 print('\nQuestão 4.')
 print(alunos_subset.shape)
 # .shape mostra a quantidade de linhas e colunas do novo DataFrame.
