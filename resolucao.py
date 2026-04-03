@@ -65,7 +65,7 @@ print('\n3_training_and_test_sets')
 alunos_new = alunos.drop(columns=["altura", "peso"])
 # .drop(columns=[]) remove colunas específicas do DataFrame.
 
-# 2. Exclua as linhas com valores nulos da coluna nota usando .dropna(subset=[])
+# 2. Exclua as linhas com valores nulos da coluna cidade usando .dropna(subset=[])
 alunos_new = alunos_new.dropna(subset=["cidade"])
 # .dropna(subset=[]) remove linhas onde há valores nulos na coluna especificada.
 
@@ -74,7 +74,7 @@ print('\nQuestão 3.')
 print(alunos_new["cidade"].value_counts())
 # .value_counts() mostra a quantidade de ocorrências de cada valor na coluna.
 
-# 4. Crie um DataFrame com todas as colunas, exceto cidade
+# 4. Crie um DataFrame com todas as colunas, exceto cidade usando .drop(..., axis=1)
 X = alunos_new.drop("cidade", axis=1)
 # .drop(..., axis=1) remove a coluna especificada do DataFrame.
 

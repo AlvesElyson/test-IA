@@ -48,9 +48,9 @@ print('\n3_training_and_test_sets')
 # 3. Mostre o balanceamento das classes na coluna cidade usando .value_counts()
 print('\nQuestão 3.')
 
-# 4. Crie um DataFrame X com todas as colunas, exceto cidade usando .drop(..., axis=1)
+# 4. Crie um DataFrame com todas as colunas, exceto cidade usando .drop(..., axis=1)
 
-# 5. Crie um DataFrame Y de labels com a coluna cidade
+# 5. Crie um DataFrame de labels com a coluna cidade
 
 # 6. Importe a função train_test_split
 from sklearn.model_selection import train_test_split
