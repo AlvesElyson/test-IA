@@ -1,8 +1,7 @@
-from dataset import alunos
+from dataset_unidade1 import alunos
 
-print("\n===============================================================================================================================================")
-
-print('\n1_pre_processing')
+#===============================================================================================================================================")
+print('\n====================== 1_pre_processing ======================')
 
 # 1. Mostre o tamanho do dataset alunos usando .shape
 print('\nQuestão 1.')
@@ -32,9 +31,8 @@ print('\nQuestão 6.')
 print(alunos_subset.shape)
 # .shape mostra a quantidade de linhas e colunas do novo DataFrame.
 
-print("\n===============================================================================================================================================")
-
-print('\n2_data_types')
+# ===============================================================================================================================================")
+print('\n====================== 2_data_types ======================')
 
 # 1. Mostre os primeiros elementos da coluna nota usando .head()
 print('\nQuestão 1.')
@@ -57,9 +55,8 @@ print(alunos["nota"].describe())
 print(alunos["nota"].dtype)
 # mostra as estatísticas e o tipo da coluna após a conversão.
 
-print("\n===============================================================================================================================================")
-
-print('\n3_training_and_test_sets')
+# ===============================================================================================================================================")
+print('\n====================== 3_training_and_test_sets ======================')
 
 # 1. Exclua as colunas altura e peso do dataset alunos usando .drop(columns=[])
 alunos_new = alunos.drop(columns=["altura", "peso"])

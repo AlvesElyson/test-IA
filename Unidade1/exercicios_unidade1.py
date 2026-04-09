@@ -1,8 +1,7 @@
-from dataset import alunos
+from dataset_unidade1 import alunos
 
-print("\n===============================================================================================================================================")
-
-print('\n1_pre_processing')
+# ===============================================================================================================================================")
+print('\n====================== 1_pre_processing ======================')
 
 # 1. Mostre o tamanho do dataset alunos usando .shape
 print('\nQuestão 1.')
@@ -21,9 +20,8 @@ print('\nQuestão 3.')
 print('\nQuestão 6.')
 
 
-print("\n===============================================================================================================================================")
-
-print('\n2_data_types')
+# ===============================================================================================================================================")
+print('\n====================== 2_data_types ======================')
 
 # 1. Mostre os primeiros elementos da coluna nota usando .head()
 print('\nQuestão 1.')
@@ -37,9 +35,8 @@ print('\nQuestão 2.')
 print('\nQuestão 4.')
 
 
-print("\n===============================================================================================================================================")
-
-print('\n3_training_and_test_sets')
+# ===============================================================================================================================================")
+print('\n====================== 3_training_and_test_sets ======================')
 
 # 1. Exclua as colunas altura e peso do dataset alunos usando .drop(columns=[])
 
@@ -57,9 +54,7 @@ from sklearn.model_selection import train_test_split
 # importa a função usada para dividir os dados em treino e teste.
 
 # 7. Separe os dados em treino e teste usando amostragem estratificada
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.4, stratify=y, random_state=42
-)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, stratify=y, random_state=42)
 # train_test_split divide os dados mantendo a proporção das classes com stratify.
 
 # 8. Mostre novamente o balanceamento das classes usando .value_counts()
