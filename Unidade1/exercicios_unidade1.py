@@ -3,24 +3,25 @@ from dataset_unidade1 import alunos
 # ===============================================================================================================================================")
 print('\n====================== 1_pre_processing ======================')
 
-# 1. Mostre o tamanho do dataset alunos usando .shape
+# 1. Mostre o tamanho do dataset alunos
 print('\nQuestão 1.')
 
 
-# 2. Mostre as informações do dataset alunos usando .info()
+# 2. Mostre as informações do dataset alunos
 print('\nQuestão 2.')
 
-# 3. Mostre quantos valores faltam na coluna cidade usando .isnull().sum()
+
+# 3. Mostre quantos valores faltam na coluna cidade
 print('\nQuestão 3.')
 
 
-# 4. Remova as colunas altura e peso do dataset alunos usando .drop(columns=[])
+# 4. Remova as colunas altura e peso do dataset alunos
 
 
-# 5. Remova as linhas com valores nulos na coluna nota .dropna(subset=[])
+# 5. Remova as linhas com valores nulos na coluna nota
 
 
-# 6. Mostre o tamanho do novo dataset alunos_subset usando .shape
+# 6. Mostre o tamanho do novo dataset alunos_subset
 print('\nQuestão 6.')
 
 
@@ -28,18 +29,18 @@ print('\nQuestão 6.')
 # ===============================================================================================================================================")
 print('\n====================== 2_data_types ======================')
 
-# 1. Mostre os primeiros elementos da coluna nota usando .head()
+# 1. Mostre os primeiros elementos da coluna nota
 print('\nQuestão 1.')
 
 
-# 2. Mostre as características da coluna nota usando .describe() e .dtype
+# 2. Mostre as características da coluna nota usando
 print('\nQuestão 2.')
 
 
-# 3. Converta a coluna nota para o tipo float usando .astype()
+# 3. Converta a coluna nota para o tipo float usando
 
 
-# 4. Mostre as características da coluna nota novamente usando .describe() e .dtype
+# 4. Mostre as características da coluna nota novamente usando
 print('\nQuestão 4.')
 
 
@@ -47,17 +48,17 @@ print('\nQuestão 4.')
 # ===============================================================================================================================================")
 print('\n====================== 3_training_and_test_sets ======================')
 
-# 1. Exclua as colunas altura e peso do dataset alunos usando .drop(columns=[])
+# 1. Exclua as colunas altura e peso do dataset alunos
 
 
-# 2. Exclua as linhas com valores nulos da coluna nota usando .dropna(subset=[])
+# 2. Exclua as linhas com valores nulos da coluna nota
 
 
-# 3. Mostre o balanceamento das classes na coluna cidade usando .value_counts()
+# 3. Mostre o balanceamento das classes na coluna cidade
 print('\nQuestão 3.')
 
 
-# 4. Crie um DataFrame com todas as colunas, exceto cidade usando .drop(..., axis=1)
+# 4. Crie um DataFrame com todas as colunas, exceto cidade
 
 
 # 5. Crie um DataFrame de labels com a coluna cidade
@@ -73,5 +74,5 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, stratif
 # train_test_split divide os dados mantendo a proporção das classes com stratify.
 
 
-# 8. Mostre novamente o balanceamento das classes usando .value_counts()
+# 8. Mostre novamente o balanceamento das classes
 print('\nQuestão 8.')
