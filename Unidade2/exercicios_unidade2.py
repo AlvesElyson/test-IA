@@ -11,6 +11,7 @@ print('\n====================== 1_standardization. ======================')
 # 1. Mostre os valores faltantes na coluna resultado
 print("\nQuestão 1.")
 
+
 # 2. Separe as variáveis (X) e o alvo (y)
 
 
@@ -52,28 +53,25 @@ print('\n====================== 3_Scaling_data ======================')
 # 2. Separe as variáveis (X) e o alvo (y)
 
 
-# 3. Normalize o dataset com scaler
+# 3. Divida o dataset em treino e teste com estratificação
 
 
-# 4. Obtenha as labels da coluna resultado
+# 4. Normalize o dataset com scaler
 
 
 # 5. Print a variância de X
 print("\nQuestão 5.")
 
 
-# 6. Print a variância do dataset X_norm
+# 6. Print a variância do dataset X normalizado
 print("\nQuestão 6.")
 
 
-# 7. Divida o dataset em treino e teste com estratificação
+# 7. Inicialize o algoritmo KNN
 
 
-# 8. Inicialize o algoritmo KNN
+# 8. Aplique a função fit do KNN
 
 
-# 9. Aplique a função fit do KNN
-
-
-# 10. Verifique o acerto do classificador
-print("\nQuestão 10.")
+# 9. Verifique o acerto do classificador
+print("\nQuestão 9.")

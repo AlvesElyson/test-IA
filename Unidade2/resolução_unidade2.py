@@ -100,19 +100,22 @@ scaler = StandardScaler()
 # 2. Separe as variáveis (X) e o alvo (y)
 X = estudantes.drop(columns=['resultado'])
 # X contém apenas os dados numéricos (entrada)
-
-
-# 3. Normalize o dataset com scaler
-X_normalizado = scaler.fit_transform(X)
-# fit_transform() faz duas coisas:
-# - aprende a média e desvio padrão (fit)
-# - aplica a transformação (transform)
-# O resultado é um array normalizado
-
-
-# 4. Obtenha as labels da coluna resultado
-y = estudantes['resultado'].values
+y = estudantes['resultado']
 # y são as classes que queremos prever (Aprovado/Reprovado)
+
+
+# 3. Divida o dataset em treino e teste com estratificação
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
+# Divide os dados em treino e teste
+# stratify=y mantém a proporção de classes (Aprovado/Reprovado)
+
+
+# 4. Normalize o dataset com scaler
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+# fit() aprende média e desvio padrão apenas do treino
+# transform() aplica a mesma escala no treino e no teste
 
 
 # 5. Print a variância de X
@@ -122,31 +125,25 @@ print(X.var())
 # Aqui vemos o quanto os dados estão espalhados antes da normalização
 
 
-# 6. Print a variância do dataset X_norm
+# 6. Print a variância do dataset X normalizado
 print("\nQuestão 6.")
-print(X_normalizado.var())
+print(X_train.var())
 # Após o StandardScaler, a variância tende a ficar próxima de 1
 # Isso padroniza todas as variáveis na mesma escala
 
 
-# 7. Divida o dataset em treino e teste com estratificação
-X_train, X_test, y_train, y_test = train_test_split(X_normalizado, y, stratify=y, random_state=42)
-# Divide os dados em treino e teste
-# stratify=y mantém a proporção de classes (Aprovado/Reprovado)
-
-
-# 8. Inicialize o algoritmo KNN
+# 7. Inicialize o algoritmo KNN
 knn = KNeighborsClassifier(n_neighbors=5)
 # Criamos o KNN com k=5 (ele olha os 5 vizinhos mais próximos)
 
 
-# 9. Aplique a função fit do KNN
+# 8. Aplique a função fit do KNN
 knn.fit(X_train, y_train)
 # Treina o modelo com os dados de treino
 
 
-# 10. Verifique o acerto do classificador
-print("\nQuestão 10.")
+# 9. Verifique o acerto do classificador
+print("\nQuestão 9.")
 print(knn.score(X_test, y_test))
 # score() retorna a acurácia
 # Ex: 0.8 = 80% de acerto nas previsões
