@@ -3,7 +3,6 @@ from dataset_unidade2 import estudantes
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 import numpy as np
-import pandas as pd
 
 #===============================================================================================================================================")
 print('\n====================== 1_standardization. ======================')
@@ -47,10 +46,6 @@ print(knn.score(X_test, y_test))
 
 #===============================================================================================================================================")
 print('\n====================== 2_log_normalization ======================')
-
-pd.set_option('display.max_columns', None)
-# Permite mostrar todas as colunas do dataset ao imprimir
-
 
 # 1. Print as características estatísticas do dataset
 print("\nQuestão 1.")
