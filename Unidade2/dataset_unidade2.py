@@ -15,17 +15,15 @@ dataset = {
 
     "nota_trabalho": [6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.5, 6.2, 6.8, 7.2,
                       7.6, 8.2, 9.0, 9.8, 6.5, 7.0, 7.8, 8.3, 8.9, 9.2],
+
+    "resultado": [
+        "Reprovado", "Reprovado", "Reprovado", "Aprovado", "Aprovado",
+        "Aprovado", "Aprovado", "Reprovado", "Reprovado", "Reprovado",
+        "Aprovado", "Aprovado", "Aprovado", "Aprovado", "Reprovado",
+        "Reprovado", "Aprovado", "Aprovado", "Aprovado", "Aprovado"
+    ]
 }
 
-df = pd.DataFrame(dataset)
-
-df["resultado"] = [
-    "Reprovado", "Reprovado", "Reprovado", "Aprovado", "Aprovado",
-    "Aprovado", "Aprovado", "Reprovado", "Reprovado", "Reprovado",
-    "Aprovado", "Aprovado", "Aprovado", "Aprovado", "Reprovado",
-    "Reprovado", "Aprovado", "Aprovado", "Aprovado", "Aprovado"
-]
-
-estudantes = df
+estudantes = pd.DataFrame(dataset)
 
 print(estudantes)
