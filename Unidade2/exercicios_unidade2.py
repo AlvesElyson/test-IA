@@ -8,20 +8,20 @@ import pandas as pd
 #===============================================================================================================================================
 print('\n====================== 1_standardization. ======================')
 
-# Separe as variáveis (X) e o alvo (y)
+# 1. Mostre os valores faltantes na coluna resultado
+print("\nQuestão 1.")
 
-# 1. Divida o dataset em treino e teste
-
-
-# 2. Mostre os valores faltantes na coluna resultado
-print("\nQuestão 2.")
+# 2. Separe as variáveis (X) e o alvo (y)
 
 
-# 3. Aplique a função fit do knn
+# 3. Divida o dataset em treino e teste
 
 
-# 4. Mostre o acerto do algoritmo
-print("\nQuestão 4.")
+# 4. Aplique a função fit do knn
+
+
+# 5. Mostre o acerto do algoritmo
+print("\nQuestão 5.")
 
 
 
@@ -33,7 +33,7 @@ print("\nQuestão 1.")
 
 
 # 2. Aplique a normalização logarítmica na coluna nota_prova
-
+print("\nQuestão 2.")
 
 # 3. Print a variância da coluna nota_prova
 print("\nQuestão 3.")

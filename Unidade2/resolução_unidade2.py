@@ -8,14 +8,21 @@ import pandas as pd
 #===============================================================================================================================================")
 print('\n====================== 1_standardization. ======================')
 
-# Separe as variáveis (X) e o alvo (y)
+# 1. Mostre os valores faltantes na coluna resultado
+print("\nQuestão 1.")
+print(estudantes['resultado'].isnull().sum())
+# isnull() verifica quais valores são nulos
+# sum() conta quantos valores nulos existem
+
+
+# 2. Separe as variáveis (X) e o alvo (y)
 X = estudantes.drop(columns=['resultado'])
 y = estudantes['resultado']
 # X contém as características (idade, horas_estudo, etc.)
 # y contém o que queremos prever (resultado: Aprovado/Reprovado)
 
 
-# 1. Divida o dataset em treino e teste
+# 3. Divida o dataset em treino e teste
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
 
 
@@ -23,21 +30,14 @@ knn = KNeighborsClassifier(n_neighbors=3)
 # Criamos o modelo KNN com k=3 (ele vai olhar os 3 vizinhos mais próximos)
 
 
-# 2. Mostre os valores faltantes na coluna resultado
-print("\nQuestão 2.")
-print(estudantes['resultado'].isnull().sum())
-# isnull() verifica quais valores são nulos
-# sum() conta quantos valores nulos existem
-
-
-# 3. Aplique a função fit do knn
+# 4. Aplique a função fit do knn
 knn.fit(X_train, y_train)
 # fit() treina o modelo
 # Ele aprende padrões nos dados de treino (X_train e y_train)
 # No KNN, ele basicamente "memoriza" os dados para comparar depois
 
 
-# 4. Mostre o acerto do algoritmo
+# 5. Mostre o acerto do algoritmo
 print("\nQuestão 4.")
 print(knn.score(X_test, y_test))
 # score() calcula a acurácia do modelo
@@ -64,7 +64,11 @@ print(estudantes.describe())
 
 
 # 2. Aplique a normalização logarítmica na coluna nota_prova
+print("\nQuestão 2.")
 estudantes['nota_prova_log'] = np.log(estudantes['nota_prova'])
+print(estudantes['nota_prova'].head(10))
+print()
+print(estudantes['nota_prova_log'].head(10))
 # np.log() aplica o logaritmo natural nos valores
 # Isso ajuda a "diminuir" diferenças muito grandes entre valores
 # Criamos uma nova coluna para guardar os valores transformados
@@ -99,7 +103,7 @@ X = estudantes.drop(columns=['resultado'])
 
 
 # 3. Normalize o dataset com scaler
-X_norm = scaler.fit_transform(X)
+X_normalizado = scaler.fit_transform(X)
 # fit_transform() faz duas coisas:
 # - aprende a média e desvio padrão (fit)
 # - aplica a transformação (transform)
@@ -113,20 +117,20 @@ y = estudantes['resultado'].values
 
 # 5. Print a variância de X
 print("\nQuestão 5.")
-print('Variância\n', X.var())
+print(X.var())
 # var() calcula a variância de cada coluna
 # Aqui vemos o quanto os dados estão espalhados antes da normalização
 
 
 # 6. Print a variância do dataset X_norm
 print("\nQuestão 6.")
-print('Variância do dataset normalizado\n', X_norm.var())
+print(X_normalizado.var())
 # Após o StandardScaler, a variância tende a ficar próxima de 1
 # Isso padroniza todas as variáveis na mesma escala
 
 
 # 7. Divida o dataset em treino e teste com estratificação
-X_train, X_test, y_train, y_test = train_test_split(X_norm, y, stratify=y, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_normalizado, y, stratify=y, random_state=42)
 # Divide os dados em treino e teste
 # stratify=y mantém a proporção de classes (Aprovado/Reprovado)
 
@@ -143,6 +147,6 @@ knn.fit(X_train, y_train)
 
 # 10. Verifique o acerto do classificador
 print("\nQuestão 10.")
-print('score', knn.score(X_test, y_test))
+print(knn.score(X_test, y_test))
 # score() retorna a acurácia
 # Ex: 0.8 = 80% de acerto nas previsões
