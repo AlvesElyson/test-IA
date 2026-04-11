@@ -1,6 +1,6 @@
 from dataset_unidade1 import alunos
 
-# ===============================================================================================================================================")
+#===============================================================================================================================================
 print('\n====================== 1_pre_processing ======================')
 
 # 1. Mostre o tamanho do dataset alunos
@@ -16,63 +16,58 @@ print('\nQuestão 3.')
 
 
 # 4. Remova as colunas altura e peso do dataset alunos
+print('\nQuestão 4.')
 
 
 # 5. Remova as linhas com valores nulos na coluna nota
+print('\nQuestão 5.')
 
 
-# 6. Mostre o tamanho do novo dataset alunos_subset
+# 6. Mostre o tamanho do novo dataset
 print('\nQuestão 6.')
 
 
 
-# ===============================================================================================================================================")
+#===============================================================================================================================================
 print('\n====================== 2_data_types ======================')
 
 # 1. Mostre os primeiros elementos da coluna nota
 print('\nQuestão 1.')
 
 
-# 2. Mostre as características da coluna nota usando
+# 2. Mostre as características da coluna nota
 print('\nQuestão 2.')
 
 
-# 3. Converta a coluna nota para o tipo float usando
+# 3. Converta a coluna nota para o tipo float
 
 
-# 4. Mostre as características da coluna nota novamente usando
+# 4. Mostre as características da coluna nota novamente
 print('\nQuestão 4.')
 
 
 
-# ===============================================================================================================================================")
+#===============================================================================================================================================
 print('\n====================== 3_training_and_test_sets ======================')
 
-# 1. Exclua as colunas altura e peso do dataset alunos
+# 1. Exclua as linhas com valores nulos da coluna cidade
 
 
-# 2. Exclua as linhas com valores nulos da coluna nota
+# 2. Mostre o balanceamento das classes na coluna cidade
+print('\nQuestão 2.')
 
 
-# 3. Mostre o balanceamento das classes na coluna cidade
-print('\nQuestão 3.')
+# 3. Crie um DataFrame com todas as colunas, exceto cidade
 
 
-# 4. Crie um DataFrame com todas as colunas, exceto cidade
+# 4. Crie um DataFrame de labels com a coluna cidade
 
 
-# 5. Crie um DataFrame de labels com a coluna cidade
+# 5. Importe a função train_test_split
 
 
-# 6. Importe a função train_test_split
-from sklearn.model_selection import train_test_split
-# importa a função usada para dividir os dados em treino e teste.
-
-
-# 7. Separe os dados em treino e teste usando amostragem estratificada
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, stratify=y, random_state=42)
-# train_test_split divide os dados mantendo a proporção das classes com stratify.
+# 6. Separe os dados em treino e teste usando amostragem estratificada
 
 
 # 8. Mostre novamente o balanceamento das classes
-print('\nQuestão 8.')
+print('\nQuestão 7.')
