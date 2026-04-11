@@ -11,7 +11,7 @@ print('\nQuestão 1.')
 print('\nQuestão 2.')
 
 
-# 3. Mostre quantos valores faltam na coluna cidade
+# 3. Mostre quantos valores faltam na coluna aprovado
 print('\nQuestão 3.')
 
 
@@ -50,17 +50,17 @@ print('\nQuestão 4.')
 #===============================================================================================================================================
 print('\n====================== 3_training_and_test_sets ======================')
 
-# 1. Exclua as linhas com valores nulos da coluna cidade
+# 1. Exclua as linhas com valores nulos da coluna aprovado
 
 
-# 2. Mostre o balanceamento das classes na coluna cidade
+# 2. Mostre o balanceamento das classes na coluna aprovado
 print('\nQuestão 2.')
 
 
-# 3. Crie um DataFrame com todas as colunas, exceto cidade
+# 3. Crie um DataFrame com todas as colunas, exceto aprovado
 
 
-# 4. Crie um DataFrame de labels com a coluna cidade
+# 4. Crie um DataFrame de labels com a coluna aprovado
 
 
 # 5. Importe a função train_test_split

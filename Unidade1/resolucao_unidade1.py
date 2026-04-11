@@ -18,9 +18,9 @@ alunos.info()
 # - quantidade de valores não nulos
 
 
-# 3. Mostre quantos valores faltam na coluna cidade
+# 3. Mostre quantos valores faltam na coluna aprovado
 print('\nQuestão 3.')
-print(alunos["cidade"].isnull().sum())
+print(alunos["aprovado"].isnull().sum())
 # isnull() identifica valores nulos (NaN)
 # sum() conta quantos valores nulos existem na coluna
 
@@ -78,24 +78,24 @@ print(alunos_new["nota"].dtype)
 #===============================================================================================================================================
 print('\n====================== 3_training_and_test_sets ======================')
 
-# 1. Exclua as linhas com valores nulos da coluna cidade
-alunos_new = alunos_new.dropna(subset=["cidade"])
-# Remove linhas onde a variável alvo (cidade) está nula
+# 1. Exclua as linhas com valores nulos da coluna aprovado
+alunos_new = alunos_new.dropna(subset=["aprovado"])
+# Remove linhas onde a variável alvo (aprovado) está nula
 
 
-# 2. Mostre o balanceamento das classes na coluna cidade
+# 2. Mostre o balanceamento das classes na coluna aprovado
 print('\nQuestão 2.')
-print(alunos_new["cidade"].value_counts())
+print(alunos_new["aprovado"].value_counts())
 # .value_counts() mostra quantas vezes cada categoria aparece
 
 
-# 3. Crie um DataFrame com todas as colunas, exceto cidade
-X = alunos_new.drop("cidade", axis=1)
+# 3. Crie um DataFrame com todas as colunas, exceto aprovado
+X = alunos_new.drop("aprovado", axis=1)
 # X contém as variáveis de entrada (features)
 
 
-# 4. Crie um DataFrame de labels com a coluna cidade
-y = alunos_new["cidade"]
+# 4. Crie um DataFrame de labels com a coluna aprovado
+y = alunos_new["aprovado"]
 # y contém a variável alvo (o que queremos prever)
 
 
